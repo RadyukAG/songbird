@@ -1,4 +1,14 @@
 .list-of-rounds__item {
     display: flex;
-    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex: auto;
+    padding: 5px 8px;
+    background-color: #3498DB;
+
+}
+
+.list-of-rounds__item a {
+    display: block;
+    color: #fff;
 }

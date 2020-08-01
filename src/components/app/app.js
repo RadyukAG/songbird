@@ -1,12 +1,12 @@
 import React from 'react';
 
 import Header from '../header';
-import data from '../../data/data';
+import namesOfRounds from '../../data/namesOfRounds';
 
 const App = () => {
     return (
         <div>
-            <Header />
+            <Header names={namesOfRounds} />
         </div>
     )
 }

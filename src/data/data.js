@@ -230,27 +230,29 @@ const differentBirds = [
         latinName: 'dendrocopos-major',
         description: 'В окрасе дятла преобладают чёрные и белые тона. Птица известна благодаря способу добычи пищи: дятел прыжками перемещается по стволу дерева, ища насекомых. Когда находит, он разбивает кору клювом и достаёт их языком.',
     },
-]
-
-const data = {
-    'Совиные': owls,
-    'Дневные хищники': dayPredators,
-    'Воробьинообразные (часть 1)': sparrowlike,
-    'Курообразные': chickenlike,
-    'Воробьинообразные1 (часть 2)': sparrowlike1,
-    'Разные': differentBirds,
-}
+];
 
 const imgURL = 'https://github.com/RadyukAG/songbird/blob/songbird/src/img/Birds/';
 const audioURL = 'https://github.com/RadyukAG/songbird/tree/songbird/src/sounds/birds';
 
-for (let value of data) {
-  value = value.map((obj) => {
+function addURLs(arr) {
+  return arr.map((obj) => {
     const newObj = obj;
     newObj.image = `${imgURL}${newObj.latinName}.jpg`;
     newObj.audio = `${audioURL}${newObj.latinName}.mp3`;
     return obj;
   });
 }
+
+const data = {
+    'Совиные': addURLs(owls),
+    'Дневные хищники': addURLs(dayPredators),
+    'Воробьиные (часть 1)': addURLs(sparrowlike),
+    'Курообразные': addURLs(chickenlike),
+    'Воробьиные (часть 2)': addURLs(sparrowlike1),
+    'Разные': addURLs(differentBirds),
+}
+
+
 
 export default data;
