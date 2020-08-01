@@ -2,15 +2,16 @@ import React from 'react';
 import './header.css';
 import AppTitle from '../appTitle';
 import ScoreBlock from '../scoreBlock';
+import ListOfRounds from '../listOfRounds';
 
 export default class Header extends React.Component {
 
   render() {
-    const { score } = this.props;
     return (
       <header className="main-header d-flex">
         <AppTitle />
-        <ScoreBlock score={score} />
+        <ScoreBlock score={this.props.score} />
+        <ListOfRounds names={this.props.names} />
       </header>
     )
   }
