@@ -3,11 +3,12 @@ import data from '../../data/data';
 import ListItem from '../listItem';
 import './variants.css';
 
-const birds = data["Дневные хищники"].map((el) => el.name);
+const testArray = data["Дневные хищники"];
+const birdsNames = testArray.map((el) => el.name);
 
 const Variants = () => {
   return (<ul className="variants">
-    {...birds.map((el) => ListItem(el))}
+    {...birdsNames.map((el) => ListItem(el))}
   </ul>)
 }
 
