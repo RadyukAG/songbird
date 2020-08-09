@@ -1,15 +1,27 @@
 import React from 'react';
-import data from '../../data/data';
 import ListItem from '../listItem';
 import './variants.css';
+import getRoundData from './getVariants';
+import variantClickHandler from './variantClickHandler';
 
-const testArray = data["Дневные хищники"];
-const birdsNames = testArray.map((el) => el.name);
-
-const Variants = () => {
-  return (<ul className="variants">
-    {...birdsNames.map((el) => ListItem(el))}
-  </ul>)
+export default class Variants extends React.Component {
+  constructor(props) {
+    super(props);
+    this.items = getRoundData.map((el) => {
+      return (
+        <ListItem
+          key={el.latinName}
+          name={el.name}
+          onClick={variantClickHandler}
+          data-id={el.latinName}
+        />)
+    })
+  }
+  render() {
+    return (
+      <ul className="variants">
+        {this.items}
+      </ul>
+    )
+  }
 }
-
-export default Variants;

@@ -1,12 +1,14 @@
 import React from 'react';
 import './listItem.css';
 
-const ListItem = (name, styleClass = "list-item", onclick) => {
+const ListItem = (props) => {
   return (
-    <li className={styleClass}
-        onClick={onclick}>
+    <li className="list-item"
+        onClick={props.onClick}
+        data-id={props['data-id']}
+        >
     <span className="list-dot"></span>
-    {name}
+    {props.name}
     </li>
   )
 }
