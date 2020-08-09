@@ -1,13 +1,19 @@
 import React from 'react';
 import ListItem from '../listItem';
 import './variants.css';
-import getRoundData from './getVariants';
+import setRoundData from './setRoundData';
 import variantClickHandler from './variantClickHandler';
+import roundDataSelector from './selectors';
 
 export default class Variants extends React.Component {
   constructor(props) {
     super(props);
-    this.items = getRoundData.map((el) => {
+    setRoundData();
+    this.roundData = roundDataSelector();
+  }
+
+  createItems() {
+    this.items = this.roundData.map((el) => {
       return (
         <ListItem
           key={el.latinName}
@@ -15,9 +21,11 @@ export default class Variants extends React.Component {
           onClick={variantClickHandler}
           data-id={el.latinName}
         />)
-    })
+    });
   }
+
   render() {
+    this.createItems();
     return (
       <ul className="variants">
         {this.items}
