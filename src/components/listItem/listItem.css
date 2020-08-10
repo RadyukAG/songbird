@@ -3,9 +3,18 @@
 }
 
 .list-dot {
+    display: inline-block;
     margin-right: 20px;
     width: 10px;
     height: 10px;
     border-radius: 50%;
     background-color: #708090;
+}
+
+.selected.red .list-dot {
+    background-color: #cc0000;
+}
+
+.selected.green .list-dot {
+    background-color: #00cc00;
 }

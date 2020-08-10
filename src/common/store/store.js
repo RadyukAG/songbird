@@ -1,7 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit';
-import { chooseVariantsReducer, setAnswerReducer, updateRoundNumberReducer, setActiveBirdReducer } from './components/variants';
-import { totalScoreReducer } from './components/scoreBlock';
-import { set_answer } from './components/variants';
+import { chooseVariantsReducer, setAnswerReducer,  setActiveBirdReducer, setRoundDataReducer, updateRoundNumberReducer } from '../../components/variants/reducers';
+import { set_round_number } from '../../components/variants/actions';
+import { totalScoreReducer } from '../../components/scoreBlock';
 
 const store = configureStore({
   reducer: {
@@ -10,10 +10,10 @@ const store = configureStore({
     currentScore: chooseVariantsReducer,
     roundNumber: updateRoundNumberReducer,
     activeBird: setActiveBirdReducer,
+    roundData: setRoundDataReducer,
   }
 })
 
-store.dispatch(updateRoundNumberReducer());
-console.log(store.getState());
+store.dispatch(set_round_number());
 
 export default store;
