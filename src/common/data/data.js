@@ -238,7 +238,7 @@ const audioURL = 'https://github.com/RadyukAG/songbird/tree/songbird/src/sounds/
 function addURLs(arr) {
   return arr.map((obj) => {
     const newObj = obj;
-    newObj.image = `${imgURL}${newObj.latinName}.jpg`;
+    newObj.image = `${imgURL}${newObj.latinName}.jpg?raw=true`;
     newObj.audio = `${audioURL}${newObj.latinName}.mp3`;
     return obj;
   });
