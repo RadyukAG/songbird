@@ -1,3 +1,3 @@
-import QuestionTitle from './question-title';
+import QuestionTitle from './questionTitle';
 
 export default QuestionTitle;

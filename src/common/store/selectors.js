@@ -1,4 +1,4 @@
-import store from '../../common/store/store';
+import store from './store';
 
 const roundSelector = () => store.getState().roundNumber;
 const answerSelector = () => store.getState().answer;

@@ -1,6 +1,6 @@
 import store from '../../common/store/store';
 import { right_answer, wrong_answer, set_active_bird } from './actions';
-import { answerSelector, roundDataSelector } from './selectors';
+import { answerSelector, roundDataSelector } from '../../common/store/selectors';
 
 function variantClickHandler (e) {
   if (!e.target.classList.contains('selected')) {

@@ -28,14 +28,13 @@ export default class BirdInfo extends React.Component {
   }
 
   render() {
-    console.log(getActiveBird());
     return(
       <div>
         <BirdImage birdImageSrc={this.state.obj.image}/>
         <div>
           <h2>{this.state.obj.name}</h2>
           <LatinName latinName={latinNameAdaptation(this.state.obj.latinName)}/>
-          <Player />
+          <Player audio={this.state.obj.audio} />
         </div>
         <Description description={this.state.obj.description}/>
       </div>

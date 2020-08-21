@@ -4,17 +4,16 @@ import { FaRegPlayCircle, FaRegPauseCircle } from 'react-icons/fa';
 import 'react-h5-audio-player/lib/styles.css';
 import './player.css';
 
-const streamUrl = 'https://raw.githubusercontent.com/HannaKaliada/rslang-data/master/files/01_0004_meaning.mp3';
 const themeColor = '#3498DB';
 const CustomIcons = {
   play: <FaRegPlayCircle fill={themeColor} />,
   pause: <FaRegPauseCircle fill={themeColor} />,
 }
-const Player = () => (
+const Player = ({ audio }) => (
   <AudioPlayer
     autoPlay
     layout="horizontal-reverse"
-    src={streamUrl}
+    src={audio}
     showJumpControls={false}
     customProgressBarSection={
     [

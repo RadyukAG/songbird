@@ -1,6 +1,6 @@
 .bird-image {
-    width: 155px;
-    height: 200px;
+    height: 155px;
+    width: 200px;
     object-fit: cover;
     border-radius: 10px;
 }

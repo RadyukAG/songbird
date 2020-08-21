@@ -1,7 +1,6 @@
 import data from '../../common/data/data';
 import namesOfRounds from '../../common/data/namesOfRounds';
-import randomizeArray from '../../features/randomizeArray';
-import { roundSelector } from './selectors';
+import { roundSelector } from '../../common/store/selectors';
 import store from '../../common/store/store';
 import { set_answer, set_round_data } from './actions';
 

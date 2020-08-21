@@ -15,5 +15,5 @@ const store = configureStore({
 })
 
 store.dispatch(set_round_number());
-
+console.log(store.getState());
 export default store;

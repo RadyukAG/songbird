@@ -1,5 +1,5 @@
 import React from 'react';
-import 'question-title.css';
+import './questionTitle.css';
 
 const QuestionTitle = ({ birdName }) => {
   return <h2 className="question-title">{birdName}</h2>

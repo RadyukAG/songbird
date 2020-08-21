@@ -4,7 +4,7 @@ import buteoButeoImg from '../../../img/Birds/buteo-buteo.jpg';
 import buteoButeoMP3 from '../../../sounds/birds/buteo-buteo.mp3';
 import pandionHaliaetusMP3 from '../../../sounds/birds/pandion-haliaetus.mp3';
 import pandionHaliaetusImg from '../../../img/Birds/pandion-haliaetus.jpg';
-import circusAeruginosusImg from '../../../img/Birds/circaetus-gallicus.jpg';
+import circusAeruginosusImg from '../../../img/Birds/circus-aeruginosus.jpg';
 import circusAeruginosusMP3 from '../../../sounds/birds/circus-aeruginosus.mp3';
 import haliaeetusAlbicillaImg from '../../../img/Birds/haliaeetus-albicilla.jpg';
 import haliaeetusAlbicillaMP3 from '../../../sounds/birds/haliaeetus-albicilla.mp3';
