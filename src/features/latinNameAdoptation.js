@@ -3,6 +3,6 @@ export default function latinNameAdaptation(name) {
     return name;
   }
   const latinName = name.replace('-', ' ');
-  const firstLetter = latinName.slice(1, 2).toUpperCase();
-  return `${firstLetter}${latinName.slice(2)}`;
+  const firstLetter = latinName.slice(0, 1).toUpperCase();
+  return `${firstLetter}${latinName.slice(1)}`;
 }
