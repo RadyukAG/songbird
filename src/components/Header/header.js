@@ -1,7 +1,7 @@
 import React from 'react';
 import './header.css';
 import AppTitle from '../appTitle';
-import ScoreBlock from '../scoreBlock';
+import { ScoreBlock } from '../scoreBlock';
 import ListOfRounds from '../listOfRounds';
 
 export default class Header extends React.Component {
@@ -10,7 +10,7 @@ export default class Header extends React.Component {
     return (
       <header className="main-header d-flex">
         <AppTitle />
-        <ScoreBlock score={this.props.score} />
+        <ScoreBlock />
         <ListOfRounds names={this.props.names} />
       </header>
     )

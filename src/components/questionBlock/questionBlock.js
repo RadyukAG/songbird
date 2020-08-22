@@ -10,15 +10,16 @@ import './questionBlock.css';
 export default class QuestionBlock extends React.Component {
   constructor(props) {
     super(props);
-    this.state = answerSelector();
-    console.log(this.state);
     this.image = questionBird;
     this.birdName = '******';
+    this.state = answerSelector();
     store.subscribe(() => {
-      console.log(store.getState().currentScore);
-      if (store.getState().currentScore.roundEnd) {
+      if (!this.state || this.state.name !== answerSelector().name) {
+        this.state = answerSelector();
+      }
+      if (store.getState().roundState.roundEnd) {
         this.image = this.state.image;
-        this.birdName = this.state.birdName;
+        this.birdName = this.state.name;
       }
     })
   }

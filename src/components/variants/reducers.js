@@ -2,19 +2,23 @@ import { right_answer, wrong_answer, set_answer, set_round_number, set_active_bi
 import { createReducer } from '@reduxjs/toolkit';
 
 const defaultState = {
-  currentScore: 5,
+  score: 5,
   roundEnd: false,
 }
 
 const chooseVariantsReducer = createReducer(defaultState, {
   [wrong_answer]: (state) => {
-    return Object.assign({}, state, {
-      currentScore: state.currentScore - 1,
-    })},
+    return {
+      ...state,
+      score: state.score - 1,
+      }
+    },
   [right_answer]: (state) => {
-    return Object.assign({}, state, {
+    return {
+      ...state,
       roundEnd: true,
-    })},
+      }
+    },
   });
 
 const setAnswerReducer = createReducer('', {

@@ -9,8 +9,7 @@ import store from '../../common/store/store';
 export default class Variants extends React.Component {
   constructor(props) {
     super(props);
-    setRoundData();
-    console.log(store.getState());
+  //  setRoundData();
     this.roundData = roundDataSelector();
   }
 
