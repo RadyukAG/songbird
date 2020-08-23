@@ -4,6 +4,7 @@ import BirdImage from '../bird-image';
 import latinNameAdaptation from '../../features/latinNameAdoptation';
 import getActiveBird from './selectors';
 import store from '../../common/store/store';
+import './birdInfo.css';
 
 const LatinName = (props) => {
   return !!props.latinName && <p>{props.latinName}</p>
@@ -29,7 +30,7 @@ export default class BirdInfo extends React.Component {
 
   render() {
     return(
-      <div>
+      <div className='bird-info'>
         <BirdImage birdImageSrc={this.state.obj.image}/>
         <div>
           <h2>{this.state.obj.name}</h2>
