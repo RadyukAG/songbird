@@ -10,16 +10,24 @@ import './questionBlock.css';
 export default class QuestionBlock extends React.Component {
   constructor(props) {
     super(props);
-    this.image = questionBird;
-    this.birdName = '******';
     this.state = answerSelector();
+    this.state = {
+      ...answerSelector(),
+      shownName: '******',
+      shownImage: questionBird,
+    }
     store.subscribe(() => {
       if (!this.state || this.state.name !== answerSelector().name) {
-        this.state = answerSelector();
+        this.setState(() => answerSelector());
       }
       if (roundEndSelector()) {
-        this.image = this.state.image;
-        this.birdName = this.state.name;
+        this.setState(() => {
+          return {
+            ...this.state,
+            shownImage: this.state.image,
+            shownName: this.state.name,
+          }
+        })
       }
     })
   }
@@ -27,10 +35,10 @@ export default class QuestionBlock extends React.Component {
   render() {
     return (
       <div className="question-block">
-        <BirdImage birdImageSrc={this.image} />
+        <BirdImage birdImageSrc={this.state.shownImage} />
         <ul className="flex-container">
           <li>
-            <QuestionTitle birdName={this.birdName} />
+            <QuestionTitle birdName={this.state.shownName} />
           </li>
           <li>
             <Player
