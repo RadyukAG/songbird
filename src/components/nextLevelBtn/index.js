@@ -1,3 +1,4 @@
 import NextLevelBtn from './nextLevelBtn';
+import isGameFinishedReducer from './reducer';
 
-export default NextLevelBtn;
+export { NextLevelBtn, isGameFinishedReducer };

@@ -1,4 +1,4 @@
-import { right_answer, wrong_answer, set_answer, set_round_number, set_active_bird, set_round_data } from './actions';
+import { right_answer, wrong_answer, set_answer, set_round_number, set_active_bird, set_round_data, next_round } from './actions';
 import { createReducer } from '@reduxjs/toolkit';
 
 const defaultState = {
@@ -19,6 +19,12 @@ const chooseVariantsReducer = createReducer(defaultState, {
       roundEnd: true,
       }
     },
+  [next_round]: (state) => {
+    return {
+      ...state,
+      roundEnd: false,
+    }
+  }
   });
 
 const setAnswerReducer = createReducer('', {

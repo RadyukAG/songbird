@@ -1,8 +1,8 @@
-import data from '../../common/data/data';
-import namesOfRounds from '../../common/data/namesOfRounds';
-import { roundSelector } from '../../common/store/selectors';
-import store from '../../common/store/store';
-import { set_answer, set_round_data } from './actions';
+import data from '../common/data/data';
+import namesOfRounds from '../common/data/namesOfRounds';
+import { roundSelector } from '../common/store/selectors';
+import store from '../common/store/store';
+import { set_answer, set_round_data } from '../components/variants/actions';
 
 function setRoundData() {
   const round = roundSelector();

@@ -1,6 +1,7 @@
 import { configureStore, combineReducers } from '@reduxjs/toolkit';
 import { chooseVariantsReducer, setAnswerReducer,  setActiveBirdReducer, setRoundDataReducer, updateRoundNumberReducer } from '../../components/variants/reducers';
 import totalScoreReducer from '../../components/scoreBlock/reducer';
+import { isGameFinishedReducer } from '../../components/nextLevelBtn';
 
 const reducers = combineReducers({
   answer: setAnswerReducer,
@@ -9,6 +10,7 @@ const reducers = combineReducers({
   roundNumber: updateRoundNumberReducer,
   activeBird: setActiveBirdReducer,
   roundData: setRoundDataReducer,
+  isGameFinished: isGameFinishedReducer,
 });
 
 const store = configureStore({

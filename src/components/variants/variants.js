@@ -1,15 +1,12 @@
 import React from 'react';
 import ListItem from '../listItem';
 import './variants.css';
-import setRoundData from './setRoundData';
 import variantClickHandler from './variantClickHandler';
 import { roundDataSelector } from '../../common/store/selectors';
-import store from '../../common/store/store';
 
 export default class Variants extends React.Component {
   constructor(props) {
     super(props);
-  //  setRoundData();
     this.roundData = roundDataSelector();
   }
 
