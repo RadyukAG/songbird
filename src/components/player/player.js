@@ -9,11 +9,14 @@ const CustomIcons = {
   play: <FaRegPlayCircle fill={themeColor} />,
   pause: <FaRegPauseCircle fill={themeColor} />,
 }
-const Player = ({ audio }) => (
+const Player = (props) => {
+  console.log(props);
+  return (
   <AudioPlayer
-    autoPlay
+    autoPlay={props.autoPlay}
+    autoPlayAfterSrcChange={props.autoPlayAfterSrcChange}
     layout="horizontal-reverse"
-    src={audio}
+    src={props.audio}
     showJumpControls={false}
     customProgressBarSection={
     [
@@ -24,6 +27,7 @@ const Player = ({ audio }) => (
     }
     customIcons={CustomIcons}
   />
-);
+  );
+}
 
 export default Player;

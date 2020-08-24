@@ -35,7 +35,10 @@ export default class BirdInfo extends React.Component {
         <div>
           <h2>{this.state.obj.name}</h2>
           <LatinName latinName={latinNameAdaptation(this.state.obj.latinName)}/>
-          <Player audio={this.state.obj.audio} />
+          <Player
+            audio={this.state.obj.audio}
+            autoPlayAfterSrcChange={false}
+             />
         </div>
         <Description description={this.state.obj.description}/>
       </div>

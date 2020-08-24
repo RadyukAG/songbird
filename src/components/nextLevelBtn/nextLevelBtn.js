@@ -3,6 +3,7 @@ import './nextLevelBtn.css';
 import store from '../../common/store/store';
 import nextLevelBtnHandler from './nextLevelBtnHandler';
 import { next_round } from '../variants';
+import { roundEndSelector } from '../../common/store/selectors';
 
 export default class NextLevelBtn extends React.Component {
   constructor(props) {
@@ -11,11 +12,10 @@ export default class NextLevelBtn extends React.Component {
       className: ''
     };
     store.subscribe(() => {
-      if (store.getState().roundState.roundEnd) {
+      if (roundEndSelector()) {
         this.setState(() => {
           return {className: 'active'}
         });
-        store.dispatch(next_round());
       } else {
         this.setState(() => {
           return {className: ''}

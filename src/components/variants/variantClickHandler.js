@@ -1,11 +1,11 @@
 import store from '../../common/store/store';
 import { right_answer, wrong_answer, set_active_bird } from './actions';
-import { answerSelector, roundDataSelector } from '../../common/store/selectors';
+import { answerSelector, roundDataSelector, roundEndSelector } from '../../common/store/selectors';
 import { increase_total_score } from '../scoreBlock';
 import answerSoundEffect from './answerSoundEffect';
 
 function variantClickHandler (e) {
-  if (!e.target.classList.contains('selected')) {
+  if (!e.target.classList.contains('selected') && !roundEndSelector()) {
     const answer = answerSelector();
     if (e.target.dataset.id === answer.latinName) {
       answerSoundEffect(true);

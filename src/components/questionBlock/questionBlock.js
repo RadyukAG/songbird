@@ -2,7 +2,7 @@ import React from 'react';
 import Player from '../player';
 import QuestionTitle from '../question-title';
 import BirdImage from '../bird-image';
-import { answerSelector } from '../../common/store/selectors';
+import { answerSelector, roundEndSelector } from '../../common/store/selectors';
 import questionBird from '../../img/question-bird.jpg';
 import store from '../../common/store/store';
 import './questionBlock.css';
@@ -17,7 +17,7 @@ export default class QuestionBlock extends React.Component {
       if (!this.state || this.state.name !== answerSelector().name) {
         this.state = answerSelector();
       }
-      if (store.getState().roundState.roundEnd) {
+      if (roundEndSelector()) {
         this.image = this.state.image;
         this.birdName = this.state.name;
       }
@@ -33,7 +33,11 @@ export default class QuestionBlock extends React.Component {
             <QuestionTitle birdName={this.birdName} />
           </li>
           <li>
-            <Player audio={this.state.audio} />
+            <Player
+            audio={this.state.audio}
+            autoPlay={true}
+            autoPlayAfterSrcChange={true}
+             />
           </li>
         </ul>
       </div>

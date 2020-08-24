@@ -1,6 +1,6 @@
 import { createAction } from '@reduxjs/toolkit';
 
-const right_answer = createAction('RIGHT_ANSWER');
+const right_answer = createAction('right_answer');
 const wrong_answer = createAction('WRONG_ANSWER');
 const next_round = createAction('NEXT_ROUND');
 const set_answer = createAction('SET_ANSWER');
