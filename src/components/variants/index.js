@@ -1,6 +1,6 @@
 import Variants from './variants';
-import { right_answer, wrong_answer, set_answer, set_round_number, set_active_bird, new_round } from './actions';
+import { right_answer, wrong_answer, set_answer, set_round_number, set_active_bird, new_round, remove_active_bird } from './actions';
 
-export { right_answer, wrong_answer, set_answer, set_round_number, set_active_bird, new_round };
+export { right_answer, wrong_answer, set_answer, set_round_number, set_active_bird, new_round, remove_active_bird };
 
 export default Variants;
