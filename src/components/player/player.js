@@ -10,7 +10,6 @@ const CustomIcons = {
   pause: <FaRegPauseCircle fill={themeColor} />,
 }
 const Player = (props) => {
-  console.log(props);
   return (
   <AudioPlayer
     autoPlay={props.autoPlay}

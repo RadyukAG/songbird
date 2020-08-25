@@ -1,5 +1,6 @@
 import { createAction } from '@reduxjs/toolkit';
 
 const finish_game = createAction('finish_game');
+const next_round = createAction('next_round');
 
-export default finish_game;
+export { finish_game, next_round };

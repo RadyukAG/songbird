@@ -10,7 +10,6 @@ import './questionBlock.css';
 export default class QuestionBlock extends React.Component {
   constructor(props) {
     super(props);
-    this.state = answerSelector();
     this.state = {
       ...answerSelector(),
       shownName: '******',
@@ -18,7 +17,13 @@ export default class QuestionBlock extends React.Component {
     }
     store.subscribe(() => {
       if (!this.state || this.state.name !== answerSelector().name) {
-        this.setState(() => answerSelector());
+        this.setState(() => {
+          return {
+            ...answerSelector(),
+            shownName: '******',
+            shownImage: questionBird,
+          }
+        });
       }
       if (roundEndSelector()) {
         this.setState(() => {

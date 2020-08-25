@@ -2,7 +2,6 @@ import React from 'react';
 import './nextLevelBtn.css';
 import store from '../../common/store/store';
 import nextLevelBtnHandler from './nextLevelBtnHandler';
-import { next_round } from '../variants';
 import { roundEndSelector } from '../../common/store/selectors';
 
 export default class NextLevelBtn extends React.Component {
