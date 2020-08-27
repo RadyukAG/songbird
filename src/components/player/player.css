@@ -1,5 +1,8 @@
 .rhap_container {
     background-color: #444;
+    display: block;
+    height: 90px;
+    position: relative;
 }
 
 .rhap_progress-bar.rhap_progress-bar-show-download {
@@ -44,6 +47,10 @@
     color: #dddddd;
 }
 
+.rhap_progress-section {
+    margin-top: 19px;
+}
+
 .rhap_progress-container {
     grid-area: bar;
 }
@@ -61,10 +68,12 @@
 }
 
 .rhap_controls-section {
-    position: relative;
+    flex-grow: 0;
 }
 
 .rhap_volume-controls {
     position: absolute;
+    bottom: 2px;
+    left: 18px;
     width: 100px;
 }

@@ -15,6 +15,6 @@ export default class ScoreBlock extends React.Component {
   }
 
   render () {
-    return <div>{`Score: ${this.state.score}`}</div>
+    return <div className='score'>{`Score: ${this.state.score}`}</div>
   }
 }
