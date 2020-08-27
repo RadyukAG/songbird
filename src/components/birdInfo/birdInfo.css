@@ -3,7 +3,6 @@
     grid-template-areas:
         "img info"
         "descr descr";
-    max-width: 50%;
     padding: 0 10px;
 }
 

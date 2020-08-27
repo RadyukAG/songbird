@@ -3,6 +3,7 @@
     display: block;
     height: 90px;
     position: relative;
+    border-radius: 10px;
 }
 
 .rhap_progress-bar.rhap_progress-bar-show-download {
