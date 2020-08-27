@@ -3,7 +3,7 @@ import './listItem.css';
 
 const ListItem = (props) => {
   return (
-    <li className="list-item"
+    <li className="list-item list-group-item"
         onClick={props.onClick}
         data-id={props['data-id']}
         >

@@ -15,3 +15,14 @@
     padding-top: 3px;
     border-top: 1px solid #555;
 }
+
+@media (max-width: 570px) {
+    .question-block {
+        flex-direction: column;
+    }
+
+    .question-block .flex-container {
+        margin-left: 0;
+        width: auto;
+    }
+}

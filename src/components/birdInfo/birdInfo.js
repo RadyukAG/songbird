@@ -32,7 +32,7 @@ export default class BirdInfo extends React.Component {
     return(
       <div className='bird-info'>
         <BirdImage birdImageSrc={this.state.obj.image}/>
-        <div>
+        <div className='second-block'>
           <h2>{this.state.obj.name}</h2>
           <LatinName latinName={latinNameAdaptation(this.state.obj.latinName)}/>
           <Player

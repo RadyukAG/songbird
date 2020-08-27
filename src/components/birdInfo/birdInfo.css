@@ -1,4 +1,62 @@
 .bird-info {
     display: grid;
+    grid-template-areas:
+        "img info"
+        "descr descr";
+    max-width: 50%;
+    padding: 0 10px;
+}
 
+.bird-image {
+    grid-area: img;
+}
+
+.second-block {
+    display: flex;
+    flex-direction: column;
+    grid-area: "second-block";
+}
+
+.bird-description {
+    display: inline-block;
+    min-width: 250px;
+    grid-area: descr;
+}
+
+@media(min-width: 771px) and (max-width: 990px) {
+    .bird-info {
+        grid-template-areas:
+            "img"
+            "info"
+            "descr";
+    }
+    .second-block p,
+    .second-block h2 {
+        text-align: center;
+    }
+}
+
+@media(min-width: 571px) and(max-width: 770px) {
+    .bird-info {
+        max-width: 100%;
+        grid-template-columns: 200px 1fr;
+        column-gap: 20px;
+    }
+}
+
+@media(max-width: 570px) {
+    .bird-info {
+        grid-template-areas:
+            "img"
+            "info"
+            "descr";
+        max-width: 100%;
+    }
+    .second-block p,
+    .second-block h2 {
+        text-align: center;
+    }
+    .bird-image {
+        margin: 0 auto;
+    }
 }

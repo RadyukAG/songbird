@@ -59,3 +59,12 @@
 .rhap_button-clear.rhap_volume-button:focus {
     outline: none;
 }
+
+.rhap_controls-section {
+    position: relative;
+}
+
+.rhap_volume-controls {
+    position: absolute;
+    width: 100px;
+}
