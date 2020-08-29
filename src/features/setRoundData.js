@@ -11,6 +11,7 @@ function setRoundData() {
   store.dispatch(set_round_number());
   store.dispatch(set_round_data(roundData));
   store.dispatch(set_answer(answer));
+  console.log(`Правильный ответ - ${answer.name}`)
 }
 
 export default setRoundData;
