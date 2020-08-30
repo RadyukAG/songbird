@@ -1,10 +1,12 @@
 import React from 'react';
 import './listOfRoundsItem.css';
 
-const ListOfRoundsItem = (name) => {
+const ListOfRoundsItem = (props) => {
   return (
-    <li className="list-of-rounds__item">
-      <a href="#">{name}</a>
+    <li className={props.className}
+        data-id={props.name}
+        >
+      <a href="#">{props.name}</a>
     </li>
   )
 }

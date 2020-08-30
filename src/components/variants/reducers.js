@@ -38,7 +38,7 @@ const setAnswerReducer = createReducer('', {
 });
 
 const updateRoundNumberReducer = createReducer(0, {
-  [set_round_number]: (state) => state < 5 ? state + 1 : 0,
+  [set_round_number]: (state) => state < 6 ? state + 1 : 0,
 });
 
 const setActiveBirdReducer = createReducer(defaultActiveBirdData, {

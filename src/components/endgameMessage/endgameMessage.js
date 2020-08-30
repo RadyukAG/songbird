@@ -7,40 +7,28 @@ import { Button, Jumbotron } from 'react-bootstrap';
 export default class endgameMessage extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      score: store.getState().totalScore,
+    const score = store.getState().totalScore;
+    if (score) {
+      this.state = {
+        title: perfectResult.congrats,
+        text: perfectResult.text,
+      }
+    } else {
+      this.state = {
+        title: result.congrats,
+        text: result.text(score),
+      }
     }
     this.clickHandler = this.clickHandler.bind(this);
-    this.createMessage();
   }
 
   clickHandler() {
 
   }
 
-  createMessage() {
-    if (this.state.score === 30) {
-      this.setState((state) => {
-        return {
-          ...state,
-          title: perfectResult.congrats,
-          text: perfectResult.text,
-        }
-      });
-    } else {
-      this.setState((state) => {
-        return {
-          ...state,
-          title: result.congrats,
-          text: result.text(state.score),
-        }
-      })
-    }
-  }
-
   render() {
     return (
-      <Jumbotron>
+      <Jumbotron className="endgameMessage">
         <h2>{this.state.title}</h2>
         <p>{this.state.text}</p>
         <Button onClick={this.clickHandler}>Играть ещё</Button>

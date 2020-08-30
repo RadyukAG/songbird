@@ -8,7 +8,7 @@ function nextLevelBtnHandler() {
   if (!roundEndSelector()) {
     return
   }
-  if (roundSelector() !== 0) {
+  if (roundSelector() !== 6) {
     store.dispatch(new_round());
     store.dispatch(remove_active_bird());
     setRoundData();

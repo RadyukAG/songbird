@@ -8,6 +8,10 @@
 
 }
 
+.list-of-rounds__item.active {
+    background-color: #3434db;
+}
+
 .list-of-rounds__item a {
     display: block;
     color: #fff;
