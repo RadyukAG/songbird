@@ -12,7 +12,6 @@ export default class Variants extends React.Component {
       roundData: roundDataSelector(),
     };
     store.subscribe(() => {
-      console.log(roundDataSelector());
       if (this.state.roundData !== roundDataSelector()) {
         this.setState(() => {
           return {

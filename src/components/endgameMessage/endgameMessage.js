@@ -3,12 +3,16 @@ import './endgameMessage.css';
 import store from '../../common/store/store';
 import { perfectResult, result } from '../../common/data/finishGameText';
 import { Button, Jumbotron } from 'react-bootstrap';
+import { set_total_score_to_default } from '../scoreBlock';
+import { start_game } from '../nextLevelBtn/actions';
+import setRoundData from '../../features/setRoundData';
+import { remove_active_bird, set_round_number, new_round } from '../variants';
 
 export default class endgameMessage extends React.Component {
   constructor(props) {
     super(props);
     const score = store.getState().totalScore;
-    if (score) {
+    if (score === 30) {
       this.state = {
         title: perfectResult.congrats,
         text: perfectResult.text,
@@ -23,7 +27,12 @@ export default class endgameMessage extends React.Component {
   }
 
   clickHandler() {
-
+    store.dispatch(start_game());
+    store.dispatch(set_total_score_to_default());
+    store.dispatch(set_round_number());
+    store.dispatch(remove_active_bird());
+    store.dispatch(new_round());
+    setRoundData();
   }
 
   render() {

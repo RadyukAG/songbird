@@ -1,7 +1,6 @@
 import React from 'react';
 import Header from '../header';
 import namesOfRounds from '../../common/data/namesOfRounds';
-import { NextLevelBtn } from '../nextLevelBtn';
 import './app.css';
 import store from '../../common/store/store';
 import Main from '../main';
@@ -20,6 +19,13 @@ export default class App extends React.Component {
           }
         })
       }
+      if (this.state.isGameFinished && !store.getState().isGameFinished) {
+        this.setState(() => {
+          return {
+            isGameFinished: false,
+          }
+        })
+      }
     })
   }
 
@@ -28,7 +34,6 @@ export default class App extends React.Component {
       <div className="container">
         <Header names={namesOfRounds} />
         <Main isGameFinished={this.state.isGameFinished} />
-        <NextLevelBtn />
       </div>
   )
   }

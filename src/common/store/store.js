@@ -15,9 +15,6 @@ const reducers = combineReducers({
 
 const store = configureStore({
   reducer: reducers
-})
-store.subscribe(() => {
-  console.log(store.getState());
 });
 
 export default store;
