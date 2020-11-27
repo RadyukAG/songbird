@@ -48,7 +48,7 @@ export default class QuestionBlock extends React.Component {
           <li>
             <Player
             audio={this.state.audio}
-            autoPlay={true}
+            autoPlay={false}
             autoPlayAfterSrcChange={true}
              />
           </li>
