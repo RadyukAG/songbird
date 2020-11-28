@@ -1,0 +1,81 @@
+.rhap_container {
+    background-color: #444;
+    display: block;
+    height: 90px;
+    position: relative;
+    border-radius: 10px;
+}
+
+.rhap_progress-bar.rhap_progress-bar-show-download {
+    height: 4px;
+}
+
+.rhap_main-controls .rhap_button-clear.rhap_main-controls-button.rhap_play-pause-button:focus{
+    outline: none;
+}
+
+.rhap_progress-indicator {
+    height: 16px;
+    width: 16px;
+    top: -7px;
+}
+
+.rhap_progress-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        "bar bar"
+        "time-cur time-dur";
+}
+
+.rhap_progress-container .rhap_progress-bar .rhap_progress-filled {
+    background-color: #3498DB;
+}
+
+.rhap_time.rhap_current-time {
+    margin: 0 calc(12px + 1%);
+    grid-area: time-cur;
+    font-size: 11px;
+    color: #dddddd;
+}
+
+.rhap_time.rhap_total-time {
+    margin: 0 calc(12px + 1%);
+    grid-area: time-dur;
+    justify-self: end;
+    font-size: 11px;
+    color: #dddddd;
+}
+
+.rhap_progress-section {
+    margin-top: 19px;
+}
+
+.rhap_progress-container {
+    grid-area: bar;
+}
+
+.rhap_additional-controls {
+    display: none;
+}
+
+.rhap_button-clear.rhap_volume-button path {
+    fill: #3498DB;
+}
+
+.rhap_button-clear.rhap_volume-button:focus {
+    outline: none;
+}
+
+.rhap_controls-section {
+    flex-grow: 0;
+}
+
+.rhap_volume-controls {
+    position: absolute;
+    bottom: 2px;
+    left: 18px;
+    width: 100px;
+}
+

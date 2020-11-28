@@ -1,0 +1,8 @@
+.bird-image {
+    display: inline-block;
+    margin: 0 auto;
+    height: 155px;
+    width: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}

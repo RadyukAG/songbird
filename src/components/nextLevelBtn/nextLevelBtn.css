@@ -1,0 +1,17 @@
+.next-level-btn.btn {
+    width: 100%;
+    color: rgba(255, 255, 255, 0.2);
+    background-color: #3498DB;
+}
+
+.next-level-btn.active {
+    color: rgba(255, 255, 255, 1);
+}
+
+.next-level-btn.btn:hover {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.next-level-btn.btn:hover {
+    color: rgba(255, 255, 255, 0.7);
+}

@@ -1,0 +1,18 @@
+.list-of-rounds__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: auto;
+    padding: 5px 8px;
+    background-color: #3498DB;
+
+}
+
+.list-of-rounds__item.active {
+    background-color: #3434db;
+}
+
+.list-of-rounds__item a {
+    display: block;
+    color: #fff;
+}
